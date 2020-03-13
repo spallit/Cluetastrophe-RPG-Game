@@ -12,6 +12,9 @@ public class CameraControl : MonoBehaviour
     //calculate offset so the camer is always the same distance from the player
     void Start()
     {
+        //startingPos.x = 0.5f;
+        //startingPos.y = 0;
+        //  Instantiate(player,startingPos, Quaternion.identity);
         offset = transform.position - player.transform.position;
     }
 
