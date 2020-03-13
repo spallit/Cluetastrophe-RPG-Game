@@ -10,6 +10,7 @@ public class PlayerControl : MonoBehaviour
     public Rigidbody2D _rb;
     public bool _direction; //this variable will help make sure the animations correspond to the right direction
     public bool _kicked; //this will destroy the enemy 
+    public GameObject GObject;
 
 
     // Start is called before the first frame update
@@ -95,7 +96,7 @@ public class PlayerControl : MonoBehaviour
             if (other.gameObject.tag.Equals("Enemy") && _kicked == false)
             {
                 gameObject.SetActive(false);
-                //GObject.setActive(true);
+                GObject.SetActive(true);
             }
             else if (_kicked = true && other.gameObject.tag.Equals("Enemy"))//runs if the player kicked the enemy
             {
