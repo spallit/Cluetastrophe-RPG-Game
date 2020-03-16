@@ -47,6 +47,10 @@ public class EnemyWalker : MonoBehaviour
             {
                 moveRight = true;
             }
+        } else if (trig.gameObject.CompareTag("Shot"))
+        {
+            Destroy(gameObject);
+            Destroy(trig.gameObject);
         }
     }
 

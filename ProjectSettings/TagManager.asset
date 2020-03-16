@@ -6,6 +6,8 @@ TagManager:
   tags:
   - clue
   - Turn
+  - Enemy
+  - Shot
   layers:
   - Default
   - TransparentFX

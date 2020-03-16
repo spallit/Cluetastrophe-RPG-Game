@@ -16,31 +16,50 @@ public class PlayerControl : MonoBehaviour
     // Start is called before the first frame update
    protected virtual void Start()
     {
-       _rb = GetComponent<Rigidbody2D>();
+        _rb = GetComponent<Rigidbody2D>();
         animator = gameObject.GetComponent<Animator>();
         animator.SetBool("moving", false);
-        animator.SetBool("left", false);
+        animator.SetBool("left", false); 
     }
 
     // Update is called once per frame
     protected virtual void Update()
     {
-        //deactivates all animations so player is just standing
-        animator.SetBool("left", false);
-        // animator.SetTrigger("jump");
-        //animator.SetTrigger("kick");
-        //animator.SetTrigger("punch");
+        //deactivates animation so player is just standing
          animator.SetBool("moving", false);
+        
+        //makes sure the player is facing left if they moved in the left direction previously
+     
 
+        //gets required input
         float xAxis = Input.GetAxis("Horizontal");
+        //calls the move method 
         Move(xAxis);
-        Jump();
 
+        //calls jump method if the up arrow was pressed
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            Jump();
+        }
+
+        //calls shoot method if the correct button is pressed
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            Shoot();
+        }
+
+        if (!_direction)
+        {
+            animator.SetBool("left", true);
+        }
+
+        //changes the position of the player to move it 
         Vector2 pos = transform.position;
         pos.x += xAxis * speed * Time.deltaTime;
         transform.position = pos;
     }
 
+    // this method activates the moving animations
     public void Move( float x)
     {
         if (x > 0)
@@ -67,12 +86,10 @@ public class PlayerControl : MonoBehaviour
         transform.position = pos;
     }
 
-
+    // this method allows the player to jump and activates the jumo animation 
     public void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-
+        
             float jumpVelocity = 10f;
             _rb.velocity = Vector2.up * jumpVelocity;
 
@@ -87,7 +104,13 @@ public class PlayerControl : MonoBehaviour
                 animator.SetTrigger("jump"); //jumps in left direction
 
             }
-        } }
+        }
+
+    //activates the shoot animations 
+    public void Shoot()
+    {
+        animator.SetTrigger("shoot");
+    }
 
 
         protected virtual void OnTriggerEnter2D(Collider2D other)
