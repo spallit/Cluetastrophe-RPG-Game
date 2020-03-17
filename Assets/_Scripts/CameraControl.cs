@@ -9,7 +9,7 @@ public class CameraControl : MonoBehaviour
 
     public GameObject player;
 
-    private Vector3 offset;
+    public Vector3 offset;
 
     //public PunchButton Punch;
 
@@ -38,7 +38,7 @@ public class CameraControl : MonoBehaviour
             Instantiate(player2, startingPos, Quaternion.identity);
             offset = transform.position - player2.transform.position;
         }*/
-        offset = transform.position - player.transform.position;
+        //offset = transform.position - player.transform.position;
     }
 
     // Update is called once per frame
@@ -47,7 +47,11 @@ public class CameraControl : MonoBehaviour
     {
         //transform.position = player1.transform.position + offset;
         // transform.position = player2.transform.position + offset;
-        transform.position = player.transform.position + offset;
+        if(player != null)
+        {
+            transform.position = player.transform.position + offset;
+        }
+        
     }
 
 

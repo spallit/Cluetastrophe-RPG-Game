@@ -8,6 +8,6 @@ public class PlayGame : MonoBehaviour
    
     public void Play()
     {
-        SceneManager.LoadScene("Customization");
+        SceneManager.LoadScene("Phase 1");
     }
 }

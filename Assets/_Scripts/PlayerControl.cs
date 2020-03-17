@@ -96,8 +96,9 @@ public class PlayerControl : MonoBehaviour
             if (other.gameObject.tag.Equals("Enemy") && _kicked == false)
             {
                 gameObject.SetActive(false);
-                GObject.SetActive(true);
-            }
+            //GObject.SetActive(true);
+            Instantiate(GObject, transform.position, Quaternion.identity);
+        }
             else if (_kicked = true && other.gameObject.tag.Equals("Enemy"))//runs if the player kicked the enemy
             {
                 Destroy(other.gameObject); // destroys enemy
