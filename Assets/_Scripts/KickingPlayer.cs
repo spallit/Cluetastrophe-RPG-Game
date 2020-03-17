@@ -18,17 +18,13 @@ public class KickingPlayer : PlayerControl
         }
     }
 
-    protected override void Start()
+    void Start()
     {
-        base.Start(); //calls the parent class start method 
+        _rb = GetComponent<Rigidbody2D>();
+        animator = gameObject.GetComponent<Animator>();
+        animator.SetBool("moving", false);
+        animator.SetBool("left", false);
     }
-
-    protected override void Update()
-    {
-        base.Update();
-        K.Attack();
-    }
-
 
     public void Attack()
     {
