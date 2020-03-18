@@ -6,8 +6,6 @@ TagManager:
   tags:
   - clue
   - Turn
-  - Enemy
-  - Bullet
   layers:
   - Default
   - TransparentFX
