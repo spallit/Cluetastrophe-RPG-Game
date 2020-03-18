@@ -17,19 +17,21 @@ public class EnemyWalker : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        //if the boolean moveRight is true, the enemy moves in the right direction
-        if (moveRight)
+        if (!Pause.isPaused)
         {
-           transform.Translate(2 * Time.deltaTime * speed, 0, 0);
-            animate.SetBool("leftDirection", false);
+            //if the boolean moveRight is true, the enemy moves in the right direction
+            if (moveRight)
+            {
+                transform.Translate(2 * Time.deltaTime * speed, 0, 0);
+                animate.SetBool("leftDirection", false);
+            }
+            //if the boolean moveRight is false, the enemy moves in the left direction
+            else
+            {
+                transform.Translate(-2 * Time.deltaTime * speed, 0, 0);
+                animate.SetBool("leftDirection", true);
+            }
         }
-        //if the boolean moveRight is false, the enemy moves in the left direction
-        else
-        {
-            transform.Translate(-2 * Time.deltaTime * speed, 0, 0);
-            animate.SetBool("leftDirection", true);
-        }
-
     }
 
     void OnTriggerEnter2D(Collider2D trig)
@@ -47,13 +49,6 @@ public class EnemyWalker : MonoBehaviour
             {
                 moveRight = true;
             }
-        } else if (trig.gameObject.CompareTag("Bullet"))
-        {
-            Destroy(gameObject); //destroys enemy
-            Destroy(trig.gameObject); //destroys bullet
         }
     }
-
-
-
 }
