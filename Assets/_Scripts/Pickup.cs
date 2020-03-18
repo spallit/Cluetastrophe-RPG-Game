@@ -20,7 +20,7 @@ public class Pickup : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("clue"))
         {
-            pickUpAllowed = true;
+            pickUpAllowed = true; 
         }
     }
 
@@ -28,13 +28,13 @@ public class Pickup : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("clue"))
         {
-            pickUpAllowed = false;
+            pickUpAllowed = false; 
         }
     }
 
     private void PickUp()
     {
-        Destroy(gameObject);
+        Destroy(gameObject); // removes the hiding place of the clue
     }
 }
 

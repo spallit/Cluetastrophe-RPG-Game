@@ -6,6 +6,11 @@ public class PunchingPlayer : PlayerControl
 {
     static public PunchingPlayer P; //Creates Singleton
 
+    protected override void Awake()
+    {
+        base.Awake();
+    }
+
     protected override void Start()
     {
         base.Start(); //calls the parent class start method 
@@ -14,21 +19,8 @@ public class PunchingPlayer : PlayerControl
     protected override void Update()
     {
         base.Update();
-        P.Attack();
+        Attack();
     }
-
-    void Awake()
-    {
-        if (P == null)
-        {
-            P = this; //sets the singleton
-        }
-        else
-        {
-            Debug.LogError("Hero.Awake() - Attempted to assign second Hero.S");
-        }
-    }
-
 
     public void Attack()
     {

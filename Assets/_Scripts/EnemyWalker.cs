@@ -47,6 +47,10 @@ public class EnemyWalker : MonoBehaviour
             {
                 moveRight = true;
             }
+        } else if (trig.gameObject.CompareTag("Bullet"))
+        {
+            Destroy(gameObject); //destroys enemy
+            Destroy(trig.gameObject); //destroys bullet
         }
     }
 

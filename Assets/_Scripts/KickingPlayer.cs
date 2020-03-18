@@ -4,26 +4,20 @@ using UnityEngine;
 
 public class KickingPlayer : PlayerControl
 {
-    static public KickingPlayer K;
-
-    void Awake()
+    protected override void Awake()
     {
-        if (K == null)
-        {
-            K = this; //sets the singleton
-        }
-        else
-        {
-            Debug.LogError("Attempted to assign second Hero.S");
-        }
+        base.Awake();
     }
 
-    void Start()
+    protected override void Start()
     {
-        _rb = GetComponent<Rigidbody2D>();
-        animator = gameObject.GetComponent<Animator>();
-        animator.SetBool("moving", false);
-        animator.SetBool("left", false);
+        base.Start(); //calls the parent class start method 
+    }
+
+    protected override void Update()
+    {
+        base.Update();
+        Attack();
     }
 
     public void Attack()
@@ -32,13 +26,13 @@ public class KickingPlayer : PlayerControl
         {
             if (_direction == true)
             {
-                animator.SetBool("kick", true); //kicks in right direction
+                animator.SetTrigger("kick"); //kicks in right direction
                 _kicked = true; // sets kicked to true so enemy can be destroyed
             }
             else if (_direction == false)
             {
                 animator.SetBool("left", true);
-                animator.SetBool("kick", true); //kicks in left direction
+                animator.SetTrigger("kick"); //kicks in left direction
                 _kicked = true;
 
             }

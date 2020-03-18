@@ -180,8 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  speed: 2
-  _rb: {fileID: 0}
-  _direction: 0
-  _kicked: 0
+  speed: 4
   GObject: {fileID: 6796374667840654405, guid: 1c9837655d86ff94cae80f5946f52f6c, type: 3}
+  bulletPrefab: {fileID: 2580388230839876638, guid: 89addfc089044634483956c5f36e1107,
+    type: 3}
