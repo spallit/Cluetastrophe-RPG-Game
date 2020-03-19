@@ -154,8 +154,11 @@ public class PlayerControl : MonoBehaviour
         }
             else if (_attacked == true && other.gameObject.tag.Equals("Enemy"))//runs if the player kicked the enemy
             {
+                
                 Destroy(other.gameObject); // destroys enemy
-               _attacked = false;
+                //adds 5 points to the score 
+                ScoreScript.countValue += 10;
+                _attacked = false;
             }
 
         }

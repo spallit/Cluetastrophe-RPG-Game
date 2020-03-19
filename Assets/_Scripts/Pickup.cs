@@ -24,6 +24,11 @@ public class Pickup : MonoBehaviour
         {
             PickUp();
         }
+        //if the variable is false but the button is pushed, deduct a point from the score 
+        else if (Input.GetKeyDown(KeyCode.F) && pickUpAllowed == false)
+        {
+            ScoreScript.countValue -= 1;
+        }
     }
 
     //pickUpAllowed is a bool variable
@@ -53,6 +58,8 @@ public class Pickup : MonoBehaviour
         Pause.isPaused = true;
         //destroys the object that the clue was hidden within
         Destroy(gameObject);
+        ScoreScript.countValue += 8;
+
     }
 
     public void OkButton()
@@ -64,10 +71,6 @@ public class Pickup : MonoBehaviour
         Pause.isPaused = false;
     }
 
-    /*public void SetCounterText()
-    {
-        //diplays text on screen of points and updates every time points change 
-        clueCounterText.text = "Clues found: " + _cluesFound.ToString() + "/3";
-    }*/
+  
 }
 

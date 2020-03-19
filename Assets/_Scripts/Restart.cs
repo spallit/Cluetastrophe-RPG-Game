@@ -9,6 +9,8 @@ public class Restart : MonoBehaviour
     public void RestartGame()
     {
         //if the restart button is pressed, go to the level 1 screen and start again
-        SceneManager.LoadScene("Phase 1"); 
+        SceneManager.LoadScene("Phase 1");
+        //score gets reset to 0
+        ScoreScript.countValue = 0;
     }
 }
