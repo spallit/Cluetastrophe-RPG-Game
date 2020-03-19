@@ -8,6 +8,7 @@ public class PlayGame : MonoBehaviour
    
     public void Play()
     {
+        //if the start button on the instructions screen is pressed, go to level 1 
         SceneManager.LoadScene("Phase 1");
     }
 }

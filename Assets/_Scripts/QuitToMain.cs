@@ -8,6 +8,7 @@ public class QuitToMain : MonoBehaviour
 
     public void ExitGame()
     {
+        //if the quit button is pressed, go to the menu scene 
         SceneManager.LoadScene("Menu");
     }
 }
