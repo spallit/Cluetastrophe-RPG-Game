@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PunchingPlayer : PlayerControl
+public class KickingPlayer : PlayerControl
 {
-    static public PunchingPlayer P; //Creates Singleton
-
     protected override void Awake()
     {
         base.Awake();
@@ -26,21 +24,20 @@ public class PunchingPlayer : PlayerControl
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (_direction == true)
+            if (direction)
             {
-                animator.SetTrigger("punch"); //kicks in right direction
-                _kicked = true; // sets kicked to true so enemy can be destroyed
+                animator.SetTrigger("kick"); //kicks in right direction
+                attacked = true; // sets attacked to true so enemy can be destroyed
             }
-            else if (_direction == false)
+            else if (!direction)
             {
                 animator.SetBool("left", true);
-                animator.SetTrigger("punch"); //kicks in left direction
-                _kicked = true;
+                animator.SetTrigger("kick"); //kicks in left direction
+                attacked = true;
 
             }
         }
     }
-
 
     protected override void OnTriggerEnter2D(Collider2D other)
     {
