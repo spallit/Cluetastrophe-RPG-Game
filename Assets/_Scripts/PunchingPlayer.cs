@@ -27,14 +27,16 @@ public class PunchingPlayer : PlayerControl
         {
             if (direction)
             {
-                animator.SetTrigger("punch"); //punches in right direction
                 attacked = true; // sets attacked to true so enemy can be destroyed
+                animator.SetTrigger("punch"); //punches in right direction
+              
             }
             else if (!direction)
             {
+                attacked = true;
                 animator.SetBool("left", true);
                 animator.SetTrigger("punch"); //punches in left direction
-                attacked = true;
+               
 
             }
         }
@@ -43,6 +45,7 @@ public class PunchingPlayer : PlayerControl
 
     protected override void OnTriggerEnter2D(Collider2D other)
     {
+        Attack();
         base.OnTriggerEnter2D(other);
     }
 }

@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/_Scenes/Instructions.unity
     guid: 82f50ab01b415c74bb3ff71278cc6ef9
   - enabled: 1
-    path: Assets/_Scenes/Phase 1.unity
+    path: Assets/_Scenes/Level 1.unity
     guid: 9336d5974ee4c384b94f54c5d621a333
   - enabled: 1
     path: Assets/_Scenes/SampleScene.unity

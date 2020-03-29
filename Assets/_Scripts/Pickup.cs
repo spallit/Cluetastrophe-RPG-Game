@@ -8,12 +8,13 @@ public class Pickup : MonoBehaviour
 {
     private bool pickUpAllowed;
     public GameObject clue;
-    //private int _cluesFound;
+   // private int _cluesFound;
     //public Text clueCounterText;
 
     public void Start()
     {
-        //SetCounterText();
+       // clueCounterText = GetComponent<Text>();
+       // _cluesFound = 0;
     }
 
     // Update is called once per frame
@@ -23,12 +24,15 @@ public class Pickup : MonoBehaviour
         if (pickUpAllowed && Input.GetKeyDown(KeyCode.F))
         {
             PickUp();
+           // _cluesFound += 1;
         }
         //if the variable is false but the button is pushed, deduct a point from the score 
         else if (Input.GetKeyDown(KeyCode.F) && pickUpAllowed == false)
         {
             ScoreScript.countValue -= 1;
         }
+
+       // clueCounterText.text = "Clues Found: " + _cluesFound + "/3";
     }
 
     //pickUpAllowed is a bool variable
@@ -66,7 +70,7 @@ public class Pickup : MonoBehaviour
     {
         //closes the canvas by setting it false
         clue.SetActive(false);
-        //_cluesFound++;
+        
         //unpauses the enemy spawner and walker
         Pause.isPaused = false;
     }

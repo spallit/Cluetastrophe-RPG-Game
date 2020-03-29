@@ -157,7 +157,7 @@ public class PlayerControl : MonoBehaviour
                 
                 Destroy(other.gameObject); // destroys enemy
                 //adds 5 points to the score 
-                ScoreScript.countValue += 10;
+                ScoreScript.countValue += 5;
                 _attacked = false;
             }
 

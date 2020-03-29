@@ -17,30 +17,35 @@ public class KickingPlayer : PlayerControl
     protected override void Update()
     {
         base.Update();
-        Attack();
+
+           Attack();
+        
     }
 
     public void Attack()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+
             if (direction)
             {
-                animator.SetTrigger("kick"); //kicks in right direction
                 attacked = true; // sets attacked to true so enemy can be destroyed
+                animator.SetTrigger("kick"); //kicks in right direction
             }
             else if (!direction)
             {
+                attacked = true;
                 animator.SetBool("left", true);
                 animator.SetTrigger("kick"); //kicks in left direction
-                attacked = true;
 
             }
         }
+        
     }
 
     protected override void OnTriggerEnter2D(Collider2D other)
     {
+        Attack();
         base.OnTriggerEnter2D(other);
     }
 }
