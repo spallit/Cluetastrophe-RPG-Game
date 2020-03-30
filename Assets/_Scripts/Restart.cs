@@ -12,5 +12,6 @@ public class Restart : MonoBehaviour
         SceneManager.LoadScene("Level 1");
         //score gets reset to 0
         ScoreScript.countValue = 0;
+        ClueCounterScript.clueCount = 0;
     }
 }

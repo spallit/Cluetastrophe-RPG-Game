@@ -24,6 +24,7 @@ public class CharacterSelect : MonoBehaviour
         //when button is pressed, an index number is passed to the array of characters, that element in the array is the one instantiated 
         GameObject selectedCharacter = characters[characterChoice];
         GameObject spawnedPlayer = Instantiate(selectedCharacter, playerSpawnPosition, Quaternion.identity);
+        Pause.isPaused = false; //activates enemy spawner if it was disabled
         
         //define that instantiated object for the camera 
         cc.player = spawnedPlayer;

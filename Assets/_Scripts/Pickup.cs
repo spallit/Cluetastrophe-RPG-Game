@@ -8,14 +8,6 @@ public class Pickup : MonoBehaviour
 {
     private bool pickUpAllowed;
     public GameObject clue;
-   // private int _cluesFound;
-    //public Text clueCounterText;
-
-    public void Start()
-    {
-       // clueCounterText = GetComponent<Text>();
-       // _cluesFound = 0;
-    }
 
     // Update is called once per frame
     public void Update()
@@ -24,15 +16,13 @@ public class Pickup : MonoBehaviour
         if (pickUpAllowed && Input.GetKeyDown(KeyCode.F))
         {
             PickUp();
-           // _cluesFound += 1;
+            ClueCounterScript.clueCount += 1;
         }
         //if the variable is false but the button is pushed, deduct a point from the score 
         else if (Input.GetKeyDown(KeyCode.F) && pickUpAllowed == false)
         {
             ScoreScript.countValue -= 1;
         }
-
-       // clueCounterText.text = "Clues Found: " + _cluesFound + "/3";
     }
 
     //pickUpAllowed is a bool variable
@@ -62,8 +52,7 @@ public class Pickup : MonoBehaviour
         Pause.isPaused = true;
         //destroys the object that the clue was hidden within
         Destroy(gameObject);
-        ScoreScript.countValue += 8;
-
+ 
     }
 
     public void OkButton()
@@ -74,7 +63,5 @@ public class Pickup : MonoBehaviour
         //unpauses the enemy spawner and walker
         Pause.isPaused = false;
     }
-
-  
 }
 
