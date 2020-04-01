@@ -7,7 +7,7 @@ public class ScoreScript : MonoBehaviour
 {
     public static int countValue = 0; //counts points
     public Text countText; //text variable that holds the reference for the Text game object
-    private int _xpLevel = 2;
+    private int _xpLevel = 1;
     private int _hearts =1;
     public GameObject h2, h3;
 
