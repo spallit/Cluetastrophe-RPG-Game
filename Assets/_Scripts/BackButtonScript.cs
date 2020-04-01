@@ -10,5 +10,6 @@ public class BackButtonScript : MonoBehaviour
     {
         //closes the canvas by setting it false
         clue.SetActive(false);
+        Pause.isPaused = false;
     }
 }

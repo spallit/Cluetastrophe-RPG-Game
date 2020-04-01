@@ -71,8 +71,9 @@ public class Pickup : MonoBehaviour
         //loads new level
         SceneManager.LoadScene("Level 2");
 
-        ClueCounterScript.level = 2;
-        ClueCounterScript.clueCount = 0;
+       ClueCounterScript.level = 2;
+       ClueCounterScript.clueCount = 0;
+
     }
 
     private void SuspectChoosing()
@@ -81,8 +82,8 @@ public class Pickup : MonoBehaviour
         //loads new level
         SceneManager.LoadScene("SuspectPage");
 
-        ClueCounterScript.level = 2;
-        ClueCounterScript.clueCount = 0;
+        //ClueCounterScript.level = 2;
+        //ClueCounterScript.clueCount = 0;
     }
 
     public void OkButton()
@@ -104,6 +105,7 @@ public class Pickup : MonoBehaviour
             Invoke("NewLevel", 3f); //invokes method after a little wait 
 
         }
+        
         else if (ClueCounterScript.level == 2 && ClueCounterScript.clueCount == 3)
         {
             //activates pop up canvas that displays a congrats message
@@ -111,8 +113,8 @@ public class Pickup : MonoBehaviour
             //this pauses the enemy spawner and walker so the player isn't killed while the pop up appears
             Pause.isPaused = true;
 
+            
             Invoke("SuspectChoosing", 3f);
-            //SceneManager.LoadScene("SuspectPage");
         }
     }
 }
