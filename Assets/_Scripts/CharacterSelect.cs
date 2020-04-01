@@ -9,6 +9,7 @@ public class CharacterSelect : MonoBehaviour
     public GameObject[] characters;
     //menu for users to pick fighting style 
     public GameObject characterSelectPanel;
+    public GameObject hintInfo;
     
     CameraControl cc;
 
@@ -31,7 +32,7 @@ public class CharacterSelect : MonoBehaviour
         //camera will follow this instance of the prefab 
         cc.offset = cc.transform.position - cc.player.transform.position;
 
-
+        hintInfo.SetActive(false);
 
     }
 }
