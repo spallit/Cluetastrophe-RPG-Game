@@ -18,7 +18,10 @@ public class Pickup : MonoBehaviour
         if (pickUpAllowed && Input.GetKeyDown(KeyCode.F))
         {
             PickUp();
-            ClueCounterScript.clueCount += 1;
+            if (canDestroy)
+            {
+                ClueCounterScript.clueCount += 1;
+            }
         }
         //if the variable is false but the button is pushed, deduct a point from the score 
         else if (Input.GetKeyDown(KeyCode.F) && pickUpAllowed == false)
@@ -109,6 +112,7 @@ public class Pickup : MonoBehaviour
             Pause.isPaused = true;
 
             Invoke("SuspectChoosing", 3f);
+            //SceneManager.LoadScene("SuspectPage");
         }
     }
 }

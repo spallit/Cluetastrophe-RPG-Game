@@ -13,7 +13,7 @@ public class CodePanel : MonoBehaviour
     public GameObject button;
     public GameObject machine;
     public GameObject note;
-
+   // public GameObject panel;
 
     void Update()
     {
@@ -27,10 +27,10 @@ public class CodePanel : MonoBehaviour
             
             clue.SetActive(true);
             Destroy(gameObject);
-            //ClueCounterScript.clueCount += 1;
             button.SetActive(false);
             machine.SetActive(false);
-            note.SetActive(false);
+            Destroy(note);
+            ClueCounterScript.clueCount += 1;
         }
         //if the code entered is wrong, reset the lock
         if (codeTextValue.Length >= 3)
