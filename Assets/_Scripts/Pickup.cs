@@ -8,7 +8,8 @@ public class Pickup : MonoBehaviour
 {
     private bool pickUpAllowed;
     public GameObject clue;
-
+    public bool canDestroy;
+    
     // Update is called once per frame
     public void Update()
     {
@@ -29,6 +30,8 @@ public class Pickup : MonoBehaviour
     //when the player is colliding with an object with the clue tag, the boolean variable is true
     private void OnTriggerEnter2D(Collider2D other)
     {
+
+      
         if (other.gameObject.tag.Equals("clue"))
         {
             pickUpAllowed = true;
@@ -38,6 +41,7 @@ public class Pickup : MonoBehaviour
     //once you exit the area in which they the tagged item and the player collide, the bool variable is now false
     private void OnTriggerExit2D(Collider2D other)
     {
+
         if (other.gameObject.tag.Equals("clue"))
         {
             pickUpAllowed = false;
@@ -51,7 +55,11 @@ public class Pickup : MonoBehaviour
         //this pauses the enemy spawner and walker so the player isn't killed while the pop up appears
         Pause.isPaused = true;
         //destroys the object that the clue was hidden within
-        Destroy(gameObject);
+        if (canDestroy)
+        {
+            Destroy(gameObject);
+        }
+        
  
     }
 
