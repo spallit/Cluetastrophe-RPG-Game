@@ -13,5 +13,6 @@ public class Restart : MonoBehaviour
         //score gets reset to 0
         ScoreScript.countValue = 0;
         ClueCounterScript.clueCount = 0;
+        ClueCounterScript.level = 1;
     }
 }

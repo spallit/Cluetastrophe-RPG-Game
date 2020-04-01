@@ -11,5 +11,6 @@ public class QuitToMain : MonoBehaviour
         //if the quit button is pressed, go to the menu scene 
         SceneManager.LoadScene("Menu");
         ClueCounterScript.clueCount = 0;
+        ClueCounterScript.level = 1;
     }
 }
