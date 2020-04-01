@@ -27,7 +27,7 @@ public class EnemyLevel1Top : MonoBehaviour
                 //adds 10 seconds to 
                 nextSpawn = Time.time + spawnRate;
                 //random range is assigned with preset range values 
-                randX = Random.Range(32f, 43f);
+                randX = Random.Range(38f, 41f);
                 //enemies are spawned randomly along the x axis of the game, within the provided range
                 whereToSpawn = new Vector2(randX, transform.position.y);
                 Instantiate(enemy, whereToSpawn, Quaternion.identity);
