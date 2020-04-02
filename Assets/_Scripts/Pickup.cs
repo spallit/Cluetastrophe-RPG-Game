@@ -24,7 +24,7 @@ public class Pickup : MonoBehaviour
             }
         }
         //if the variable is false but the button is pushed, deduct a point from the score 
-        else if (Input.GetKeyDown(KeyCode.F) && pickUpAllowed == false)
+        else if (Input.GetKeyDown(KeyCode.F)&& !pickUpAllowed && !!canDestroy)
         {
             ScoreScript.countValue -= 1;
         }
@@ -81,9 +81,6 @@ public class Pickup : MonoBehaviour
        congratsPopUp.SetActive(false);
         //loads new level
         SceneManager.LoadScene("SuspectPage");
-
-        //ClueCounterScript.level = 2;
-        //ClueCounterScript.clueCount = 0;
     }
 
     public void OkButton()
@@ -102,7 +99,7 @@ public class Pickup : MonoBehaviour
             //this pauses the enemy spawner and walker so the player isn't killed while the pop up appears
             Pause.isPaused = true;
 
-            Invoke("NewLevel", 3f); //invokes method after a little wait 
+            Invoke("NewLevel", 3f); //invokes method with delay
 
         }
         
@@ -114,7 +111,7 @@ public class Pickup : MonoBehaviour
             Pause.isPaused = true;
 
             
-            Invoke("SuspectChoosing", 3f);
+            Invoke("SuspectChoosing", 3f); //invoke method with delay
         }
     }
 }

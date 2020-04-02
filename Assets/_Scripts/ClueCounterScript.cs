@@ -19,15 +19,10 @@ public class ClueCounterScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //this updates the Clue Counter Text
         countText.text = "Clues Found: " + clueCount + "/3";
 
     }
 
-
-    /*public int level
-    {
-        get { return _level; }
-        set { _level = value; }
-    }*/
 
 }

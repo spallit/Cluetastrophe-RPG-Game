@@ -1313,6 +1313,7 @@ MonoBehaviour:
   - {fileID: 3518894957731800596, guid: 2d90eeb5678b6fb48926301a08294c23, type: 3}
   - {fileID: 1819780850835873071, guid: 2ccb3c7910d012140938fd0dfbfc36bd, type: 3}
   characterSelectPanel: {fileID: 764953651}
+  hintInfo: {fileID: 0}
 --- !u!1 &61186329
 GameObject:
   m_ObjectHideFlags: 0
@@ -4820,7 +4821,7 @@ GameObject:
   - component: {fileID: 325793379}
   m_Layer: 0
   m_Name: Blue Bin
-  m_TagString: Untagged
+  m_TagString: clue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5845,7 +5846,7 @@ GameObject:
   - component: {fileID: 394500654}
   m_Layer: 0
   m_Name: Screen
-  m_TagString: Untagged
+  m_TagString: clue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15715,6 +15716,7 @@ MonoBehaviour:
   - {fileID: 3518894957731800596, guid: 2d90eeb5678b6fb48926301a08294c23, type: 3}
   - {fileID: 1819780850835873071, guid: 2ccb3c7910d012140938fd0dfbfc36bd, type: 3}
   characterSelectPanel: {fileID: 764953651}
+  hintInfo: {fileID: 0}
 --- !u!114 &1263456517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15921,7 +15923,7 @@ GameObject:
   - component: {fileID: 1273430940}
   m_Layer: 0
   m_Name: Desk
-  m_TagString: Untagged
+  m_TagString: clue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

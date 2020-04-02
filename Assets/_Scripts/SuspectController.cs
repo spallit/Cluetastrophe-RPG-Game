@@ -11,23 +11,25 @@ public class SuspectController : MonoBehaviour
     public GameObject lost;
     public GameObject won;
 
-    
+    //Corresponds to Suspect 1 
     public void FirstChoice() 
     {
-        lost.SetActive(true);
+        lost.SetActive(true); //activates the canva that says the player lost
     }
 
+    //Corresponds to Suspect 12
     public void SecondChoice()
     {
-        won.SetActive(true);
+        won.SetActive(true); //activates the canva that says the player won
     }
 
+    //Corresponds to Suspect 12
     public void ThirdChoice()
     {
-        lost.SetActive(true);
+        lost.SetActive(true); //activates the canva that says the player won
     }
 
-
+    //This method restarts the game  
     public void ReplayButtonPressed()
     {
         //if the restart button is pressed, go to the level 1 screen and start again
@@ -38,8 +40,10 @@ public class SuspectController : MonoBehaviour
         ClueCounterScript.clueCount = 0;
     }
 
+    //This method exits the game
     public void ExitButtonPressed()
     {
-
+        //This stops the application from running in editor
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 }

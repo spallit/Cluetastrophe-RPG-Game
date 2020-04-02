@@ -107,6 +107,7 @@ public class PlayerControl : MonoBehaviour
     // this method activates the shooting animations
     void Shoot()
     {
+        
         //actiavtes shooting animations in the correct direction
         if (_direction == true)
         {
@@ -141,26 +142,36 @@ public class PlayerControl : MonoBehaviour
         {
             brb.velocity = Vector2.right * 10;
         }
+        _attacked = true;
     }
 
         protected virtual void OnTriggerEnter2D(Collider2D other)
+        {
+
+        //checks if there are any lives
+        if (ScoreScript.hearts > 1 && other.gameObject.tag.Equals("Enemy"))
+        {
+            Destroy(other.gameObject); //Destroys just the enemy
+            ScoreScript.hearts -= 1; // decreases the amount of lives because one gets used up 
+        }
+        else if (ScoreScript.hearts == 1)
         {
             //checks if game object has tag that tells them if this is an enemy 
             if (other.gameObject.tag.Equals("Enemy") && _attacked == false)
             {
                 gameObject.SetActive(false);
-            
-            Instantiate(GObject, transform.position, Quaternion.identity);
-        }
+
+                Instantiate(GObject, transform.position, Quaternion.identity);
+            }
             else if (_attacked == true && other.gameObject.tag.Equals("Enemy"))//runs if the player kicked the enemy
             {
-                
+
                 Destroy(other.gameObject); // destroys enemy
                 //adds 5 points to the score 
                 ScoreScript.countValue += 5;
                 _attacked = false;
             }
-
+        }
         }
 
     //These properties allow children to access _direction and _attacked while keeping the fields private

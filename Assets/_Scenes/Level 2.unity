@@ -25472,7 +25472,7 @@ GameObject:
   - component: {fileID: 721537415}
   m_Layer: 0
   m_Name: red bin
-  m_TagString: Untagged
+  m_TagString: clue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30923,7 +30923,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &853207889
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30940,7 +30940,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -425, y: 0.20000076}
+  m_AnchoredPosition: {x: -406.5, y: -0}
   m_SizeDelta: {x: 27.5, y: 25.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &853207890
@@ -31839,7 +31839,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &890021395
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31856,7 +31856,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -398, y: 0.70000076}
+  m_AnchoredPosition: {x: -378.8, y: -0}
   m_SizeDelta: {x: 27.5, y: 25.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &890021396
@@ -42579,7 +42579,7 @@ GameObject:
   - component: {fileID: 1164803065}
   m_Layer: 0
   m_Name: filing cabnet (2)
-  m_TagString: Untagged
+  m_TagString: clue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60644,7 +60644,7 @@ GameObject:
   - component: {fileID: 1696855360}
   m_Layer: 0
   m_Name: machine
-  m_TagString: Untagged
+  m_TagString: clue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

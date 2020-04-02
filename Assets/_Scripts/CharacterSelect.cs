@@ -32,7 +32,10 @@ public class CharacterSelect : MonoBehaviour
         //camera will follow this instance of the prefab 
         cc.offset = cc.transform.position - cc.player.transform.position;
 
-        hintInfo.SetActive(false);
+        if (ClueCounterScript.level == 2)
+        {
+            hintInfo.SetActive(false);
+        }
 
     }
 }
