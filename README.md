@@ -1,7 +1,11 @@
 # Cluetastrophe-RPG-Game
-The Unity game project is based on an undercover spy (protagonist) from the CIA, whose partner was abruptly killed by a member of the mafia. The spy is on a hunt to capture the one responsible for the murder. The CIA has concluded that there are three murder
-suspects, and thus the spy is sent to find clues located at the scene of the crime, an abandoned factory. However, this mission does come with its difficulties. The mafia has sent their troops to the factory to try to stop the spy from identifying the murder. Now, it is up to the spy to use his
-combat skills to fight them off, while also searching for clues to solve the mystery. Character customization: The player has the freedom to choose between a male and female spy in this game.
+
+The project was created using Unity for game development, C# and Microsoft Visual Studio for coding, and open-source graphics. 
+Collaborators: Rawan El-Moghrabi, Maisie Harrington, Linah Al-Jarad, Sanah Pallithotungal
+
+The Unity game project is based on an undercover spy (protagonist) from the CIA, whose partner was abruptly killed by a member of the mafia. The spy is on a hunt to capture the one responsible for the murder. The CIA has concluded that there are three murder suspects, and thus the spy is sent to find clues located at the scene of the crime, an abandoned factory. However, this mission does come with its difficulties. The mafia has sent their troops to the factory to try to stop the spy from identifying the murder. Now, it is up to the spy to use his combat skills to fight them off, while also searching for clues to solve the mystery. 
+
+Character customization: The player has the freedom to choose between a male and female spy in this game.
 
 The 2D platform game will have three different levels that the player must go through. Each level will look remotely different from the other to emphasize a change of settings. All the
 assets were designed using open source graphics. The background, the floor and the background objects (not interactive) were obtained from a tile template from the Unity Asset Store. The tiles
